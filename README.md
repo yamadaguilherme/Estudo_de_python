@@ -254,4 +254,4 @@ p → passos(de quantas em quantas casas é "pulado" um caractere)
 > l u
 > ```
 
-Parei na aula 42
+Parei na aula 49
