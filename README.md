@@ -187,3 +187,71 @@ x e X → hexadecimal (ABCDEF0123456789)
 > ```
 > O Gui tem 1.70 de altura
 > ```
+
+## F strings
+Formatação para Pads  
+:(Caractere)(<^>)(Quantia) → Cria a quantia de caracteres do(s) lado(s) utilizados  
+\< → Coloca x caracteres a esquerda do texto  
+\^ → Coloca x caracteres com o texto centralizado  
+\> → Coloca x caracteres com o texto centralizado  
+
+> **Entrada:**
+> ```python
+> variavel = 'ABC'
+> print(f'{variavel:$>10}')
+> ```
+
+> **Saída:**
+> ```
+> ABC$$$$$$$
+> ```
+
++ → Força a aparecer o sinal do número
+- → Força a aparecer o sinal do número CASO seja negativo
+= → Força o número antes do caractere a aparecer depois do sinal
+, → Força a aparecer , nas casas de milhar
+
+> **Entrada:**
+> ```python
+> variavel = '1000.482837283'
+> print(f'{variavel:0=+10,.1f}')
+> ```
+
+> **Saída:**
+> ```
+> +001,000.5
+> ```
+
+---
+
+Conversion Flags
+!r → __repr__()
+!s → __str__()
+
+## Fatiamento de strings
+Correspondente de cada caractere na frase "Olá Mundo":   
+
+ 012345678   
+ Olá Mundo   
+-987654321   
+
+O índice [2] → á   
+O índice [-2] → d
+
+Fatiamento [i:f:p]
+i → início
+f → fim
+p → passos(de quantas em quantas casas é "pulado" um caractere)
+
+> **Entrada:**
+> ```python
+> variavel = 'Olá mundo'
+> print(variavel[1:7:2])
+> ```
+
+> **Saída:**
+> ```
+> l u
+> ```
+
+Parei na aula 42
