@@ -1,6 +1,9 @@
 
 # 📚 Resumo de aulas do curso Python 3 de Otavio Luiz na Udemy.
 
+## Lembrete de atalhos!
+**Shift+alt+downarrow** = Copia a linha atual para baixo   
+**Selecionar linhas + CTRL /** = Torna todas as linhas selecionadas comentários
 ## Função print()
 **print('texto')** → Imprime  
 **,** → Separa os itens dentro do print()  
@@ -254,4 +257,11 @@ p → passos(de quantas em quantas casas é "pulado" um caractere)
 > l u
 > ```
 
-Parei na aula 49
+## Introdução ao try/except
+
+Para resolver erros que NÃO envolvem sintaxe:   
+try → tentar executar o código  
+except → pular caso haja um erro no try  
+São utilizados os dois juntos  
+
+Parei na aula 52
