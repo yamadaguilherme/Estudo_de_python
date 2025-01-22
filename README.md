@@ -264,4 +264,12 @@ try → tentar executar o código
 except → pular caso haja um erro no try  
 São utilizados os dois juntos  
 
-Parei na aula 52
+
+## Identidade
+Toda variável é marcada com uma id para representa-la.  
+É possível ver a id usando id(objeto())
+
+## Is, is not
+É literal é ou não é, pode ser utilizado em lógicas para rodar certas condições
+
+Parei na aula 56
