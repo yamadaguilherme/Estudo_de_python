@@ -272,4 +272,13 @@ Toda variável é marcada com uma id para representa-la.
 ## Is, is not
 É literal é ou não é, pode ser utilizado em lógicas para rodar certas condições
 
-Parei na aula 56
+## Built in types
+Série de ações pré definidas para tipos como str, int, float, bool.
+Disponível em: https://docs.python.org/3/library/stdtypes.html
+
+## Repetições
+while condicao:
+Enquanto a condição imposta for verdade, o código dentro do while será repetido até que seja alterado o valor verdade.
+break dentro do while quebra a repetição
+
+Parei na aula 60
