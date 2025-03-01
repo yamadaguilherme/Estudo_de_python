@@ -281,4 +281,24 @@ while condicao:
 Enquanto a condição imposta for verdade, o código dentro do while será repetido até que seja alterado o valor verdade.
 break dentro do while quebra a repetição
 
-Parei na aula 60
+## Operadores de atribuição
+
++= → Soma a própria variavel com o valor indicado(pode ser int/float/str)
+-= → Subtrai a própria variavel com o valor indicado(pode ser int/float/str)
+*= → Multiplica a própria variavel com o valor indicado(pode ser int/float/str)
+/= → Divide a própria variavel com o valor indicado(pode ser int/float/str)
+//= → Divide arredondando a própria variavel com o valor indicado(pode ser int/float/str?)
+**= → Exponencia arredondando a própria variavel com o valor indicado(pode ser int/float/str?)
+%= → Resto da divisão a própria variavel com o valor indicado(pode ser int/float/str?)
+
+## Break/Continue no while
+
+O Break para o while e continua a leitura pós o mesmo
+
+Pode ser utilizado continue para voltar ao início do while sem que ele termine de executar todo o while
+
+## While dentro de while
+
+Fazer laços dentro de laços, analogamente a um relógio com mínutos e horas
+
+Parei na aula 64
