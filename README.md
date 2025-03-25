@@ -301,4 +301,9 @@ Pode ser utilizado continue para voltar ao início do while sem que ele termine 
 
 Fazer laços dentro de laços, analogamente a um relógio com mínutos e horas
 
-Parei na aula 64
+##  Else com o While
+
+É possível utilizar o else: após um while
+Vatagem: se possuir um break dentro do while e um else após o while, e o break for executado, o else é ignorado.
+
+Parei na aula 71
