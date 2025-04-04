@@ -306,4 +306,8 @@ Fazer laços dentro de laços, analogamente a um relógio com mínutos e horas
 É possível utilizar o else: após um while
 Vatagem: se possuir um break dentro do while e um else após o while, e o break for executado, o else é ignorado.
 
+## For / In
+
+Outro tipo de repetição
+
 Parei na aula 71
