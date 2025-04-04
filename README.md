@@ -310,4 +310,10 @@ Vatagem: se possuir um break dentro do while e um else após o while, e o break 
 
 Outro tipo de repetição
 
+# Range
+
+Função que mostra a "Range"
+Range(start,stop,step)
+Começo, quando parar e de quanto em quanto corre o Range
+
 Parei na aula 71
