@@ -310,10 +310,30 @@ Vatagem: se possuir um break dentro do while e um else após o while, e o break 
 
 Outro tipo de repetição
 
-# Range
+## Range
 
 Função que mostra a "Range"
 Range(start,stop,step)
 Começo, quando parar e de quanto em quanto corre o Range
+
+## Itererável, Iterador (Como funciona o For)
+
+iter() Te retorna o Iter do objeto utilizado, onde foi alocado na memória
+
+next() Chama o próximo valor de Iter
+
+> **Entrada:**
+> ```python
+> texto = 'Gui' #iterável
+> iterador = iter(texto) #iterador
+>
+> while True:
+>   try:
+>       letra = next(iterador)
+>       print(letra)
+>   except StopIteration: #StopIteration é o erro ao acabar o next
+>       break
+> ```
+
 
 Parei na aula 71
