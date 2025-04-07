@@ -397,4 +397,4 @@ Funcionam como ponteiros
 lista_b = lista_a.copy()
 faz uma copia da lista_a e volta a funcionar como variáveis
 
-Parei na aula 71
+Parei na aula 86
