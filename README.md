@@ -335,5 +335,66 @@ next() Chama o próximo valor de Iter
 >       break
 > ```
 
+## Continue, break, else
+
+As mesmas funções possíveis dentro do while, podem ser utilizadas no for
+
+## List
+
+[] cria uma lista
+Lista são mutáveis, diferente de str
+Suportam diferenets valores dentro dela ao mesmo tempo
+Ex:
+
+> **Entrada:**
+> ```python
+> lista = [123, 'ola', True]
+> print(lista[0], type(lista[0]))
+> ```
+
+> **Saída:**
+> ```
+> 123 <class 'int'>
+> ```
+
+## Create, read, update, delete (CRUD)
+
+Criar lista []
+ler list[]
+update list[indice] = item atualizado
+del list[indice]
+
+Evitar deletar pois em lista grande consome muita memória
+
+lista.append(item) = adiciona o item ao um novo último valor na lista
+
+lista.pop() = remove o último item da lista
+lista.pop(indice) = remove o indice indicado
+.pop também retorna o item removido
+lista.clear() = limpa a lista
+lista.insert(indice, item) = adiciona o item no indice desejado, sem excluir ou reescrever nada
+
+lista_a.extend(lista_b) #extende a lista_a, copiando os itens da lista b, e salva na variavel lista_a
+lista_c = lista_a + lista_b #concatena a lista_a e lista_b na lista_c
+
+## Dados mutáveis
+
+Funcionam como ponteiros
+
+> **Entrada:**
+> ```python
+> lista_a = [123, 'ola', True]
+> lista_b = lista_a
+> lista_a.append('oi')
+> print(lista_b)
+> ```
+
+> **Saída:**
+> ```
+> [123, 'ola', True, 'oi']
+> ```
+
+lista_b = lista_a.copy()
+faz uma copia da lista_a e volta a funcionar como variáveis
 
 Parei na aula 71
