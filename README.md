@@ -396,5 +396,16 @@ Funcionam como ponteiros
 
 lista_b = lista_a.copy()
 faz uma copia da lista_a e volta a funcionar como variáveis
+## Desempacotamento e Tuplas
+
+É possivel atribuir variáveis para cada item em uma lista
+lista = [João, Maria, Menenguim]
+nome1, nome2, nome3 = lista
+
+cada nome será atribuido a um nomex
+
+Caso queira apenas desempacotar um dos itens, é possível fazer:
+nome1, *_ = lista
+onde *_ será uma lista com o restante de nomes
 
 Parei na aula 86
