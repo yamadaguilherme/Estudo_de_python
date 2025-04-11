@@ -416,4 +416,19 @@ lista = list(tupla)
 ou
 tupla = tuple(lista)
 
+## Enumarate
+
+É possível usar enumarate para enumerar cada item da sua lista
+Caso seja atribuido a uma variável, x = enumarate(lista)
+E seja usada em um for, for item in x:
+Só sera possível a execução uma vez, o valor de x se perde depois de um uso.
+Para contornar isso, é possível utilizar
+
+for item in enumarate(lista):
+    indice, nome = item
+
+Para um modo mais simples:
+
+for indice, nome in enumarate(lista):
+
 Parei na aula 86
