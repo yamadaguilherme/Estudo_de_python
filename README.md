@@ -408,4 +408,12 @@ Caso queira apenas desempacotar um dos itens, é possível fazer:
 nome1, *_ = lista
 onde *_ será uma lista com o restante de nomes
 
+tuplas podem serem criadas quando não há necessidade de mexer na "lista"
+tupla = 'João', 'Maria', 'Menenguim'
+
+É possível converter tuplas para lista e vice-versa
+lista = list(tupla)
+ou
+tupla = tuple(lista)
+
 Parei na aula 86
