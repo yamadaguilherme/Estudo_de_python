@@ -416,7 +416,7 @@ lista = list(tupla)
 ou
 tupla = tuple(lista)
 
-## Enumarate
+## Enumerate
 
 É possível usar enumarate para enumerar cada item da sua lista
 Caso seja atribuido a uma variável, x = enumarate(lista)
@@ -429,6 +429,53 @@ for item in enumarate(lista):
 
 Para um modo mais simples:
 
-for indice, nome in enumarate(lista):
+for indice, nome in enumerate(lista):
 
-Parei na aula 86
+## Pontos flutuantes e arredondamentos
+
+Calculos com pontos flutuantes resultam e números não exatos.
+Para contorno é possível formatar as casas como exemplo:
+
+print(f'{numero:.2f}')
+Mas isso retorna um str
+
+Para arredondar em int, é possível usar a função round
+
+print(round(numero, 2))
+
+Para números muito exatos pode-se usar a biblioteca Decimal~
+
+import decimal
+numero = decimal.Decimal(numeroemstr)
+
+Porém há necessidade do número estar formatado em str
+
+## split join strip
+
+split
+
+Em uma str você consegue usar seguintes funções:
+frase = 'Olha só que, coisa interessante'
+
+lista_frase = frase.split(',')
+
+print(lista_frase)
+
+Saída: 
+['Olha só que', ' coisa interessante']
+
+strip
+
+Remove os espaços antes e depois de um str
+
+rstrip, lstrip
+
+Corta apenas um dos lados de uma str
+lista.strip()
+
+join
+
+Une strings, podendo colocar algum caractere entre elas
+frases = ''.join(lista_frase)
+
+parei na aula 93
