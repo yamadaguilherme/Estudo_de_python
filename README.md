@@ -477,5 +477,53 @@ join
 
 Une strings, podendo colocar algum caractere entre elas
 frases = ''.join(lista_frase)
+## Listas em listas
+
+É possível que haja listas dentro de listas, equivalente a pastas dentro de pastas.
+Para acessar:
+lista = ['andre', 'claudia', 'guilherme', ['levi', 'coraline']]
+
+lista[3][0]
+representa levi
+
+## Interpretador do python
+
+python -help (mostra todos comandos possíveis)
+
+python mod.py (executa o mod)
+
+python -u (unbuffered)
+
+python -m mod (lib mod como script)
+python -c 'cmd' (comando)
+python -i mod.py (interativo com mod)
+
+## Desempacotamento com chamada de funções
+
+lista = ['andre', 'claudia', 'guilherme', ['levi', 'coraline']]
+
+print(*lista)
+
+Saída:
+
+andre claudia guilherme ['levi', 'coraline'] 
+
+caso utilizar 
+print(*lista, sep='\n')
+
+Saída: 
+
+andre
+claudia
+guilherme
+['levi', 'coraline']
+
+## Operação ternária
+
+digito = int(input('digite um número de 0 a 9: '))
+
+novo_digito = digito if digito <= 9 else 0
+
+faz com que o digito possa ser de 0 a 9, caso insira um valor maior que 9, ele será 0
 
 parei na aula 93
