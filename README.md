@@ -526,4 +526,9 @@ novo_digito = digito if digito <= 9 else 0
 
 faz com que o digito possa ser de 0 a 9, caso insira um valor maior que 9, ele será 0
 
+## import random
+
+import random
+random.randint gera um número inteiro aleatório 
+
 parei na aula 93
