@@ -551,4 +551,15 @@ def função(a,b,c=None):
 
 É possível atribuir valores None, onde caso seja inputado um valor de C, o C será considerado o valor inputado, e em condições que não seja inputado nada, ele se comportará como None
 
+## Global
+
+Os valores de variáveis dentro de uma função apenas servem para dentro dela
+Para quebrar isso, pode-se definir valores fora da função OU utilizar o global
+
+def func():
+    global x
+    x = 10
+
+o x será possivel utilizar mesmo fora da função
+
 parei na aula 93
