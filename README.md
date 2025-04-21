@@ -562,4 +562,15 @@ def func():
 
 o x será possivel utilizar mesmo fora da função
 
-parei na aula 93
+## *args 
+
+def função(*args):
+
+Empacotamento:
+Para o tanto de argumentos que você queira guardar e não modificar em uma tupla
+Caso queira modificar, pode retransformar a tupla em uma lista
+
+para desempacotar pode utilizar o *noma_da_variavel
+
+
+parei na aula 118
