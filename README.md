@@ -572,5 +572,16 @@ Caso queira modificar, pode retransformar a tupla em uma lista
 
 para desempacotar pode utilizar o *noma_da_variavel
 
+##  dict
+
+dict é um type
+é um dicionário contendo vários valores com suas nomenclaturas
+
+animais = {
+    'nome': 'levi',
+    'peso': '5kg',
+    'idade': '6 anos',
+
+}
 
 parei na aula 118
