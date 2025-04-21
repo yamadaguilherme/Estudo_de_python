@@ -531,4 +531,24 @@ faz com que o digito possa ser de 0 a 9, caso insira um valor maior que 9, ele s
 import random
 random.randint gera um número inteiro aleatório 
 
+## Parâmetro/Argumentos
+
+def função(a,b,c):
+
+Você pode pedir um argumento em funções para que ela aplique o objetivo dela
+a,b,c são os parâmetros
+
+Caso seja inputado os valores 1,2,3 para os parâmetros a,b,c eles serão chamados de
+argumentos
+
+função(1,c=3,b=2)
+
+Pode se chamar os argumentos mostrando o parâmetro referente a eles
+
+## NoneType
+
+def função(a,b,c=None):
+
+É possível atribuir valores None, onde caso seja inputado um valor de C, o C será considerado o valor inputado, e em condições que não seja inputado nada, ele se comportará como None
+
 parei na aula 93
