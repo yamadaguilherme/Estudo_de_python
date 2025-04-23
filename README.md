@@ -584,4 +584,22 @@ animais = {
 
 }
 
+## Chaves
+
+animais = {}
+
+chave = 'nome' 
+
+animais[chave] = 'levi'
+animais['peso'] = '5kg'
+
+CRUD funciona para chaves 
+
+modelo de if e else utilizando dict
+
+if animais.get('idade') is None:
+    print('não existe')
+else:
+    print(animais['idade'])
+
 parei na aula 118
