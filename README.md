@@ -602,4 +602,26 @@ if animais.get('idade') is None:
 else:
     print(animais['idade'])
 
+   
+## Métodos em dict
+
+len(dicionario) - retorna quantas chaves há no dicionário
+
+dicionario.keys() - retorna os nomes das chaves 
+é possível fazer com for também
+for chaves in dicionario:
+
+dicionario.values() - retorna os valores das chaves
+
+dicionario.items() - retorna tanto as chaves como os valores
+
+dicionario.setdefault('chave', 'valor') - seta um valor para uma chave se não existir
+
+dicionario = {
+    'chave1' = valor1,
+    'chave2' = valor2,
+}
+
+dicio = dicionario.copy() - copia o dicionario 
+
 parei na aula 118
