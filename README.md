@@ -629,4 +629,31 @@ caso queira fazer uma deepcopy:
 import copy
 dicionario2 = copy.deepcopy(dicionario1)
 
+dicionario.get('chave1', 'mensagem caso não exista')
+
+get pede a chave do dicionário mas não acontece erro caso não exista
+parecido com o try mas para dicionários 
+
+dicionario.pop('chave1') - retorna a chave1 mas apaga ela do dicionário
+
+dicionario.popitem() - retorna o último item do dicionário mas apaga ele
+
+dicionario.update({
+    'chave1' : 'item1'
+    'chave2' : 'item2'
+
+})
+
+ou
+
+dicionario.update(chave1 = 'item1', chave2 = 'item2')
+
+update atualiza alguma chave e pode adicionar novas chaves
+
+dicionario.update(lista)
+ou
+dicionario.update(tupla)
+
+são funcionais
+
 parei na aula 118
