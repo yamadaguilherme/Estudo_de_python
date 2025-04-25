@@ -622,6 +622,11 @@ dicionario = {
     'chave2' = valor2,
 }
 
-dicio = dicionario.copy() - copia o dicionario 
+dicio = dicionario.copy() - copia RASA do dicionario (shallowcopy)
+
+caso queira fazer uma deepcopy:
+
+import copy
+dicionario2 = copy.deepcopy(dicionario1)
 
 parei na aula 118
