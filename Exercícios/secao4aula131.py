@@ -16,6 +16,8 @@ def processamento(lista):
         if i in verificador:
             return i
         verificador.add(i)
+    return('Não há itens duplicados')
+        
 
 def main():
     print(processamento(entrada()))
