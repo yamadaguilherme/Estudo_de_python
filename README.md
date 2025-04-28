@@ -671,4 +671,25 @@ Não aceitam valores mútaveis
 Não tem índices
 Funcionam analogamente como sacolas
 
+MÉTODOS ÚTEIS
+
+s1.add('valor') - adiciona o valor no set
+
+s1.update() - pode adicionar vários valores de uma vez
+
+s1.clear() - limpa o set
+
+s1.discard('valor') - descarta o valor dentro do set
+
+OPERADORES ÚTEIS
+
+| - união
+
+& - intersecção
+
+*-*  - 'a - b' = resulta nos itens únicos do grupo da esquerda
+
+^ - diferença simétrica(itens que não estão em ambos)
+
+
 parei na aula 118
