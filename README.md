@@ -656,4 +656,19 @@ dicionario.update(tupla)
 
 são funcionais
 
+## Set 
+
+s1 = set()  - cria um set vazio
+
+s1 = set{1,2,3} - set com Dados
+
+set discarta todos os valores repetidos
+é possível a transformação de lista ou tupla em sets e a volta deles também
+método efetivo para tirar valores iguais
+
+porém os sets NÃO GARANTEM ordem 
+Não aceitam valores mútaveis
+Não tem índices
+Funcionam analogamente como sacolas
+
 parei na aula 118
