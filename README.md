@@ -692,4 +692,39 @@ OPERADORES ÚTEIS
 ^ - diferença simétrica(itens que não estão em ambos)
 
 
+## Função lambda
+
+UTF-8 é a ordem de caracteres usada pelo python
+
+Exemplo:
+
+Lista com nomes e sobrenomes
+
+> ```python
+> def ordena(item):
+>   return item['nome']
+> 
+>lista.sort(key=ordena)
+>
+> for item in lista:
+>    print(item)
+> ```
+
+De maneira mais simples:
+
+> ```python
+> lista.sort(key=lambda item: item['nome'])
+>
+> for item in lista:
+>    print(item)
+> ```
+
+lambda não precisa ser definida antes
+
+lambda x, y: x+y
+estaria definindo uma função de soma
+
+lambda é usado para coisas simples para encurtar
+
+
 parei na aula 118
