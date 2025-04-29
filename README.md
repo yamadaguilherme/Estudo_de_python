@@ -726,5 +726,38 @@ estaria definindo uma função de soma
 
 lambda é usado para coisas simples para encurtar
 
+## Empacotamento e Desempacotamento
+
+Empacotamento(packing)
+
+*args = argumentos posicionais extras (recebidos como uma tupla).
+
+**kwargs = argumentos nomeados extras (recebidos como um dicionário).
+
+> ```python
+> def exemplo(*args, **kwargs):
+>    print(args)    # tupla
+>    print(kwargs)  # dicionário
+>
+>
+> exemplo(1, 2, 3, nome="João", idade=25)
+> # args = (1, 2, 3)
+> # kwargs = {"nome": "João", "idade": 25}
+> ```
+
+Desempacotamento(unpacking)
+
+É quando usamos * ou ** para espalhar os valores de uma tupla ou dicionário ao chamar a função.
+
+> ```python
+> valores = (10, 20)
+> dados = {"nome": "Ana", "idade": 22}
+>
+> def mostrar(a, b, nome, idade):
+>    print(a, b, nome, idade)
+>
+> mostrar(*valores, **dados)
+> ```
+
 
 parei na aula 118
