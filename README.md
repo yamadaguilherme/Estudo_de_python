@@ -799,4 +799,25 @@ Mapeamento é você criar uma "base" onde pode mudar os valores seguindo a sequ�
 Vem antes do for 
 
 
+## Filtro de dados em list comprehension
+
+Vem depois do for 
+Decide quais valores serão incluidos da lista original
+
+> ```python
+> produtos = [
+>    {'nome': 'p1', 'preco': 20},
+>    {'nome': 'p2', 'preco': 10},
+>    {'nome': 'p3', 'preco': 30},
+> ]
+>
+> novos_produtos = [
+>    produto for produto in produtos if produto['preco'] >= 20
+> ]
+>
+> for produto in novos_produtos:
+>    print(produto)
+> ```
+
+
 parei na aula 118
