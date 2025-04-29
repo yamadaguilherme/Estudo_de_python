@@ -759,5 +759,44 @@ Desempacotamento(unpacking)
 > mostrar(*valores, **dados)
 > ```
 
+## List Comprehension
+
+lista = []
+for num in range(10):
+    lista.append(numero)
+print(lista)
+
+mas para um jeito mais fácil utilizando list Comprehension:
+
+lista = [num for num in range(10)]
+print(list)
+
+## Mapeamento
+
+Para o mapeamento é possível utilizar a função .map()
+Porém para organização e leitura é melhor ser utilizado manualmente
+
+> ```python
+> produtos = [
+>    {'nome': 'p1', 'preco': 20},
+>    {'nome': 'p2', 'preco': 10},
+>    {'nome': 'p3', 'preco': 30},
+> ]
+>
+> novos_produtos = [
+>    {**produto, 'preco': produto['preco'] * 1.05}
+>    if produto['preco'] > 20 else {**produto}
+>    for produto in produtos
+> ]
+>
+> for produto in novos_produtos:
+>    print(produto)
+> ```
+
+O código acima mapeia os produtos e faz o preço aumentar em 5% caso o preco seja maior que 20
+
+Mapeamento é você criar uma "base" onde pode mudar os valores seguindo a sequência
+Vem antes do for 
+
 
 parei na aula 118
