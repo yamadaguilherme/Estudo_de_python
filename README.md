@@ -819,5 +819,32 @@ Decide quais valores serão incluidos da lista original
 >    print(produto)
 > ```
 
+## List comprehension com dois for
+
+É possível fazer com dois for
+
+> ```python
+> lista = [
+>    (x,y)
+>    for x in range(3)
+>    for y in range(3)
+> ]
+>
+> ```
+
+Ou também com um for na parte ternária
+
+
+> ```python
+> lista = [
+>    [x for y in range(3)]
+>    for y in range(3)
+> ]
+>
+> ```
+
+OBS: os dois geram resultados DIFERENTES
+
+
 
 parei na aula 118
