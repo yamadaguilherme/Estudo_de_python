@@ -337,5 +337,13 @@ Dictionary:
 
 Todo compreendimento de list comprehension pode serem usadas para dict e set
 
+## isinstance()
+
+Verifica se seu item é de tal classe
+if isinstance(item, classe):
+
+faz uma ação caso seu item seja da classe desejada
+
+
 
 parei na aula 118
