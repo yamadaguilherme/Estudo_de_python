@@ -845,6 +845,28 @@ Ou também com um for na parte ternária
 
 OBS: os dois geram resultados DIFERENTES
 
+## Dictionary comprehension e set comprehension
+
+Dictionary: 
+
+> ```python
+> produto = {
+>     'nome': 'Caneta Azul',
+>     'preco': 2.5,
+>     'categoria': 'Escritório',
+> }
+> 
+> dc = {
+>     chave: valor.upper()
+>     if isinstance(valor, str) else valor
+>     for chave, valor
+>     in produto.items()
+> }
+> 
+> print(dc)
+> ```
+
+Todo compreendimento de list comprehension pode serem usadas para dict e set
 
 
 parei na aula 118
