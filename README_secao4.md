@@ -344,6 +344,33 @@ if isinstance(item, classe):
 
 faz uma ação caso seu item seja da classe desejada
 
+## isinstance()
+
+Verifica se seu item é de tal classe
+if isinstance(item, classe):
+
+faz uma ação caso seu item seja da classe desejada
+
+
+## Truthy and falsy
+
+Valores podem assumir Truth ou false, mas também podem serem Truthy ou falsy
+Exemplos de falsy:
+
+false
+0
+''
+[]
+None
+{}
+()
+0.0
+
+Também existem funções para verificar se é falsy ou Truthy
+falsy(item)
+truthy(item)
+
+Seriam como grupos de valores que assumem falsy
 
 
 parei na aula 118
