@@ -372,5 +372,14 @@ truthy(item)
 
 Seriam como grupos de valores que assumem falsy
 
+## dir, hasattr e getattr
 
-parei na aula 118
+São verificadores de atributos.
+Conseguem ver se alguma função é permitida no objeto dado
+
+dir(objeto) - verifica quais são todas funções permitidas
+
+hasattr(objeto, função) - verifica se no objeto é permitida a função desejada
+
+getattr(objeto, função()) - executa a função mesmo se ela estiver salva em outra variável
+
