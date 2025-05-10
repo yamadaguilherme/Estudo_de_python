@@ -383,3 +383,24 @@ hasattr(objeto, função) - verifica se no objeto é permitida a função deseja
 
 getattr(objeto, função()) - executa a função mesmo se ela estiver salva em outra variável
 
+
+
+## Generator expression, iterables and iterators
+
+Iterable: você pode acessar índices
+
+Iterators: você só pode acesar sequencias
+
+Generator expression é uma função gera uma sequencia um de cada vez, ocupando menos memória
+
+> ```python
+> generator(n for n in range(10000))
+> for i in generator:
+>   print(i)
+> ```
+> ```
+> A saída será print sequencial de 0 até 9999
+> ```
+
+Todo generator é um iterator, i.e. pode se chamar as funções aplicaveis em iterators.
+
