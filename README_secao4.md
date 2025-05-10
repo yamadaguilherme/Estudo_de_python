@@ -404,3 +404,5 @@ Generator expression é uma função gera uma sequencia um de cada vez, ocupando
 
 Todo generator é um iterator, i.e. pode se chamar as funções aplicaveis em iterators.
 
+![Imagem de lógica](https://miro.medium.com/v2/resize:fit:720/format:webp/1*iBgdO1ukASeyaLtSv3Jpnw.png)
+[imagem retirada do site 'miro.medium', em 10/05/2025]
