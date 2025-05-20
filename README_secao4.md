@@ -411,3 +411,48 @@ Todo generator é um iterator, i.e. pode se chamar as funções aplicaveis em it
 <p align="center">
   <em>[imagem retirada do site 'miro.medium', em 10/05/2025]</em>
 </p>
+
+
+## Generator function
+
+Generator function são funções que podem serem pausadas
+
+Exemplo:
+
+
+    def fibonacci_sequence():
+        a, b = 0, 1
+        while True:
+            yield a
+            a, b = b, a + b
+
+    fib_gen = fibonacci_sequence()
+    for _ in range(10):
+        print(next(fib_gen))
+
+yield faz a pausa da função e retorna o valor, quando chamado novamente, a função continua de onde pausou
+
+## Yield from
+
+É possível conectar duas funções geradoras diferentes unindo elas com yield from
+
+    def generator_1():
+        yield 1
+        yield 2
+        yield 3
+
+    def generator_2():
+        yield from generator_1()
+        yield 4
+        yield 5
+
+    for value in generator_2():
+        print(value)
+
+    Saída:
+    1
+    2
+    3
+    4
+    5
+    
