@@ -456,3 +456,20 @@ yield faz a pausa da função e retorna o valor, quando chamado novamente, a fun
     4
     5
     
+## Try, else, except and finally
+
+Try e except já foram mencionadas
+
+o except por consequência da The zen of python
+deve sempre ser especificado o erro:
+
+except TypeError:
+
+except Except: maior classe de erro possível, quando cair em qual quer erro não definido, cairá nesse except
+
+é possível utilizar vários except's
+
+Try com finally
+O finally é executado independente de o try ter conseguido completar todas as ações
+
+Else pode ser utilizado mas acaba por ser redundante nas maioria das vezes
