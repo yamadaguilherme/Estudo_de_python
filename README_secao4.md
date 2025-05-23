@@ -473,3 +473,10 @@ Try com finally
 O finally é executado independente de o try ter conseguido completar todas as ações
 
 Else pode ser utilizado mas acaba por ser redundante nas maioria das vezes
+
+## Raise 
+
+raise erro 
+força que um erro aconteça
+
+É útil para tratamento de erros esperados
