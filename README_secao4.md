@@ -480,3 +480,29 @@ raise erro
 força que um erro aconteça
 
 É útil para tratamento de erros esperados
+
+## Módulos, import, from, as e *
+
+O site: https://docs.python.org/3/py-modindex.html
+possuí todos os módulos incluidos no python
+
+Maneiras de importar módulos
+
+import módulo:
+importa todo o módulo
+
+name space:
+é o módulo.ação
+
+vantagens de importar modulo inteiro:
+o name space é bem definido no programa
+
+desvantagens:
+nomes grandes
+
+from módulo import ação1, ação2:
+importa apenas ações do módulo
+
+pode se utilizar o as para mudar o nome do módulo ou ação
+exemplo:
+from sys import exit as sair
