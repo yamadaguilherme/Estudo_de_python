@@ -506,3 +506,55 @@ importa apenas ações do módulo
 pode se utilizar o as para mudar o nome do módulo ou ação
 exemplo:
 from sys import exit as sair
+
+## Modularização
+
+É possivel acessar pelo seu código outra pasta com outro código
+Chamado de módulo
+
+import sys
+import modulo_outra_pasta
+
+o programa vai importar a outra pasta chamada modulo_outra_pasta e executar
+
+Caso o modulo esteja em outro caminho/diretório
+é possivel usar 
+sys.path.append('Nome/do/caminho')
+
+
+## Recarregamento de módulo, importlib e singleton
+
+o import módulo é um singleton, i.e. só pode ter uma instância por execução do programa
+
+consequência: o módulo sempre que for chamado será a mesma instância, caso esteja dentro de um for ou while, só será feita uma execução, pois sua instância não mudará
+
+para contornar isso, podemos utilizar a importlib
+
+import importlib 
+
+e dentro do for utilizar:
+importlib.reload(módulo)
+
+oque vai fazer a reutilização do módulo
+
+## Packages
+
+é possível colocar módulos dentro de pastas(packages)
+
+exemplo de package:
+package/modulo
+
+import package.modulo
+
+porém quando você for utilizar alguma função dentro do módulo
+pode acabar por ser muito longa
+
+exemplo:
+print(package.modulo.soma_do_módulo)
+
+para contornar isso, pode se usar:
+
+from package import módulo
+
+print(modulo.soma_do_módulo)
+
