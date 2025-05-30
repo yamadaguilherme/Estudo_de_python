@@ -558,3 +558,7 @@ from package import módulo
 
 print(modulo.soma_do_módulo)
 
+
+
+As execuções importam pois definem o pov, caso executar um arquivo que não esteja no mesmo diretório haverá necessidade de importação.
+Analogamente ao file explorer, só podendo acessar as pastas contidas dentro do repositório, sem a possibilidade de retorno para diretório anteriores.
