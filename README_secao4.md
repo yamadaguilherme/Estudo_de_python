@@ -562,3 +562,40 @@ print(modulo.soma_do_módulo)
 
 As execuções importam pois definem o pov, caso executar um arquivo que não esteja no mesmo diretório haverá necessidade de importação.
 Analogamente ao file explorer, só podendo acessar as pastas contidas dentro do repositório, sem a possibilidade de retorno para diretório anteriores.
+
+## Variáveis livres + nonlocal
+
+Variáveis livres são variáveis que são referenciadas em uma função (ou bloco de código), mas não são definidas dentro desse escopo. Em vez disso, elas vêm de um escopo mais externo.
+
+Pode se utilizar nonlocal x para acessar e poder alterar valores de outros escopos
+
+*lembrete: funções closure:
+
+def contador(x):
+    valor = x #variavel definida no escopo externo
+    def soma(y):
+        nonlocal valor
+        valor += y
+        return valor
+    return soma
+
+c = contador(1)
+print(c(5))
+print(c(1))
+print(c(-2))
+
+## Funções decoradoras em geral(decorators)
+
+Funções que adicionam funcionalidades a outras funções ou métodos sem modificá-las diretamente. Elas "embrulham" a função original, permitindo executar código antes ou depois dela, e retornam uma nova função com o comportamento modificado.
+
+utilizam um formato de closure + a modificação desejada
+
+def criar_funcao(funcao):
+    def interna():
+        modificacao
+        return resultado
+    return interna
+
+
+ele utiliza a funcao e altera uma nova modificacao
+
