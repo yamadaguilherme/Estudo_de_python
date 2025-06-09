@@ -599,3 +599,79 @@ def criar_funcao(funcao):
 
 ele utiliza a funcao e altera uma nova modificacao
 
+## Syntax Sugar 
+
+Syntactic sugar (ou açúcar sintático) em Python é uma forma mais simples, elegante e legível de escrever código
+
+property
+
+Uma das formas é nas funções
+caso você for utilizar uma função que cria outra função, pode chamar ela simplesmente usando @
+
+O decorador @property permite que você acesse o resultado de um método como se fosse um atributo, sem precisar colocar parênteses ().
+
+## Função decoradora com parâmetro
+
+Um decorador com parâmetros é um decorador que recebe argumentos além da função a ser decorada.
+
+A função externa: recebe os parâmetros do decorador.
+
+A função do decorador em si: recebe a função a ser decorada.
+
+A função wrapper: modifica o comportamento da função original.
+
+
+
+## Ordem de aplicação dos decoradores
+
+A ordem vem de baixo para cima
+
+
+@decorador(3)
+@decorador(2)
+@decorador(1)
+
+decorador(1) será executado antes
+
+## Função zip e zip_longest
+
+zip
+a função junta duas listas com os indicadores iguais, usando o tamanho como o MENOR comprimento entre as duas listas
+
+siglas = ['BA', 'SP', 'MG', 'RJ']
+cidades = ['Salvador', 'Ubatuba', 'Belo Horizonte']
+
+print(list(zip(siglas,cidades)))
+
+saida:
+[['BA', 'Salvador'], ['SP', 'Ubatuba'], ['MG', 'Belo Horizonte']]
+
+zip_longest
+a função junta duas listas com os indicadores iguais, usando o tamanho como o MAIOR comprimento entre as duas listas
+
+é necessário importar
+
+from itertools import zip_longest
+
+siglas = ['BA', 'SP', 'MG', 'RJ']
+cidades = ['Salvador', 'Ubatuba', 'Belo Horizonte']
+
+print(list(zip_longest(siglas,cidades)))
+
+saida:
+[['BA', 'Salvador'], ['SP', 'Ubatuba'], ['MG', 'Belo Horizonte'], ['RJ', None]]
+
+é possivel completar os valores que vão estar como None passando um terceiro parâmetro:
+
+print(list(zip_longest(siglas,cidades,fillvalue = 'x')))
+
+saida:
+[('BA', 'Salvador'), ('SP', 'Ubatuba'), ('MG', 'Belo Horizonte'), ('RJ', 'x')]
+
+## count
+
+from itertools import count
+
+count() é uma função de contagem infinita
+parâmetros: 
+count(start, step)
