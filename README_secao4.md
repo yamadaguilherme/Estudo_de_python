@@ -675,3 +675,51 @@ from itertools import count
 count() é uma função de contagem infinita
 parâmetros: 
 count(start, step)
+
+## Combinations, permutations e product
+
+Organizam em inter as possivei combinações
+
+combinations nao repete as combinações, a ordem não importa
+exemplo: 
+caso apareça x e y, então, y e x não aparecerão
+
+from intertools import combinations, permutations, product
+
+print(*list(combinations(lista, numcombinado)))
+
+permutations repete as combinações, a ordem importa
+exemplo: 
+caso apareça x e y, então, y e x  aparecerão
+
+print(*list(permutations(lista, numcombinado)))
+
+product
+
+faz o produto entre as possiveis combinações
+exemplo:
+
+camisa = [
+    ['azul', 'branca', 'preta' , 'beje']
+    ['feminino', 'masculino']
+]
+
+
+print(product(*camisa))
+
+irá fazer todas combinações possiveis entre as cores e o gênero
+
+## Group by
+
+from intertools import groupby
+
+groupby cria grupos quando indicado a lista e a chave
+
+é necessário que a chave esteja ordenada, caso não esteja, a função não irá funcionar corretamente
+
+grupos = groupby(lista, key= chave)
+
+for chave, grupo in grupos:
+    print(chave)
+    for item in grupo:
+    print(item)
