@@ -723,3 +723,41 @@ for chave, grupo in grupos:
     print(chave)
     for item in grupo:
     print(item)
+
+## Map
+
+Útil para alterar vários itens em um interador
+Lembrete: map retorna um interator
+É a função já feita como se fosse rodar o for para substituir cada elemento
+
+exemplo:
+
+nomes = ['ana', 'joão', 'maria']
+nomes_maiusculos = list(map(str.upper, nomes))
+print(nomes_maiusculos)  # ['ANA', 'JOÃO', 'MARIA']
+
+como foi alterado para lista, o 'interador' foi consumido, mas a lista pode ser reutilizada
+
+## partial
+
+
+partial faz uma copia de uma funcao com alguma das variaveis substituida por um valor fixo
+vantagens: ela é só uma cópia, então você ainda pode usar sua função original
+
+from functools import partial
+
+def multiplicar(a, b):
+    return a * b
+
+dobro = partial(multiplicar, 2)
+
+print(dobro(10))  # 20
+print(dobro(5))   # 10
+
+## generatortype
+
+from types import GeneratorType
+
+isinstance(objeto, GeneratorType)
+
+retorna true ou false verificando se é um generator
