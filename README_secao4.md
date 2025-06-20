@@ -761,3 +761,33 @@ from types import GeneratorType
 isinstance(objeto, GeneratorType)
 
 retorna true ou false verificando se é um generator
+
+## filter
+
+a função pede
+filter(função, lista, acumulador)
+
+exemplo:
+
+produtos = [
+    {'nome': 'Produto 5', 'preco': 10.00},
+    {'nome': 'Produto 1', 'preco': 22.32},
+    {'nome': 'Produto 3', 'preco': 20.11},
+    {'nome': 'Produto 2', 'preco': 105.87},
+    {'nome': 'Produto 4', 'preco': 69.90},
+]
+
+novos_produtos = [
+    p for p in produtos
+    if p['preco'] > 10
+ ]
+
+novo_produtos = filter(
+    lambda p: p['preco'] > 10,
+    produtos,
+    0
+)
+
+note que novos_produtos e novo_produto fazem a mesma coisa
+
+o retorno do filter sempre será igual ou menor a lista dada
