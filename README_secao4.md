@@ -419,16 +419,17 @@ Generator function são funções que podem serem pausadas
 
 Exemplo:
 
+> ```python
+>  def fibonacci_sequence():
+>        a, b = 0, 1
+>        while True:
+>            yield a
+>            a, b = b, a + b
+> fib_gen = fibonacci_sequence()
+>    for _ in range(10):
+>        print(next(fib_gen)) 
+> ```
 
-    def fibonacci_sequence():
-        a, b = 0, 1
-        while True:
-            yield a
-            a, b = b, a + b
-
-    fib_gen = fibonacci_sequence()
-    for _ in range(10):
-        print(next(fib_gen))
 
 yield faz a pausa da função e retorna o valor, quando chamado novamente, a função continua de onde pausou
 
@@ -571,8 +572,9 @@ Pode se utilizar nonlocal x para acessar e poder alterar valores de outros escop
 
 *lembrete: funções closure:
 
+```python
 def contador(x):
-    valor = x #variavel definida no escopo externo
+    valor = x  # variável definida no escopo externo
     def soma(y):
         nonlocal valor
         valor += y
@@ -583,6 +585,7 @@ c = contador(1)
 print(c(5))
 print(c(1))
 print(c(-2))
+```
 
 ## Funções decoradoras em geral(decorators)
 
@@ -590,12 +593,13 @@ Funções que adicionam funcionalidades a outras funções ou métodos sem modif
 
 utilizam um formato de closure + a modificação desejada
 
+```python
 def criar_funcao(funcao):
     def interna():
         modificacao
         return resultado
     return interna
-
+```
 
 ele utiliza a funcao e altera uma nova modificacao
 
@@ -638,36 +642,43 @@ decorador(1) será executado antes
 zip
 a função junta duas listas com os indicadores iguais, usando o tamanho como o MENOR comprimento entre as duas listas
 
+```python
 siglas = ['BA', 'SP', 'MG', 'RJ']
 cidades = ['Salvador', 'Ubatuba', 'Belo Horizonte']
 
 print(list(zip(siglas,cidades)))
+```
 
+```python
 saida:
 [['BA', 'Salvador'], ['SP', 'Ubatuba'], ['MG', 'Belo Horizonte']]
+```
 
 zip_longest
 a função junta duas listas com os indicadores iguais, usando o tamanho como o MAIOR comprimento entre as duas listas
 
 é necessário importar
 
+```python
 from itertools import zip_longest
 
 siglas = ['BA', 'SP', 'MG', 'RJ']
 cidades = ['Salvador', 'Ubatuba', 'Belo Horizonte']
 
 print(list(zip_longest(siglas,cidades)))
-
+```
+```python
 saida:
 [['BA', 'Salvador'], ['SP', 'Ubatuba'], ['MG', 'Belo Horizonte'], ['RJ', None]]
-
+```
 é possivel completar os valores que vão estar como None passando um terceiro parâmetro:
 
+```python
 print(list(zip_longest(siglas,cidades,fillvalue = 'x')))
 
 saida:
 [('BA', 'Salvador'), ('SP', 'Ubatuba'), ('MG', 'Belo Horizonte'), ('RJ', 'x')]
-
+```
 ## count
 
 from itertools import count
@@ -684,9 +695,11 @@ combinations nao repete as combinações, a ordem não importa
 exemplo: 
 caso apareça x e y, então, y e x não aparecerão
 
+```python
 from intertools import combinations, permutations, product
 
 print(*list(combinations(lista, numcombinado)))
+```
 
 permutations repete as combinações, a ordem importa
 exemplo: 
@@ -699,6 +712,7 @@ product
 faz o produto entre as possiveis combinações
 exemplo:
 
+```python
 camisa = [
     ['azul', 'branca', 'preta' , 'beje']
     ['feminino', 'masculino']
@@ -706,6 +720,7 @@ camisa = [
 
 
 print(product(*camisa))
+```
 
 irá fazer todas combinações possiveis entre as cores e o gênero
 
@@ -716,14 +731,14 @@ from intertools import groupby
 groupby cria grupos quando indicado a lista e a chave
 
 é necessário que a chave esteja ordenada, caso não esteja, a função não irá funcionar corretamente
-
+```python
 grupos = groupby(lista, key= chave)
 
 for chave, grupo in grupos:
     print(chave)
     for item in grupo:
     print(item)
-
+```
 ## Map
 
 Útil para alterar vários itens em um interador
@@ -731,11 +746,11 @@ Lembrete: map retorna um interator
 É a função já feita como se fosse rodar o for para substituir cada elemento
 
 exemplo:
-
+```python
 nomes = ['ana', 'joão', 'maria']
 nomes_maiusculos = list(map(str.upper, nomes))
 print(nomes_maiusculos)  # ['ANA', 'JOÃO', 'MARIA']
-
+```
 como foi alterado para lista, o 'interador' foi consumido, mas a lista pode ser reutilizada
 
 ## partial
@@ -743,7 +758,7 @@ como foi alterado para lista, o 'interador' foi consumido, mas a lista pode ser 
 
 partial faz uma copia de uma funcao com alguma das variaveis substituida por um valor fixo
 vantagens: ela é só uma cópia, então você ainda pode usar sua função original
-
+```python
 from functools import partial
 
 def multiplicar(a, b):
@@ -753,13 +768,13 @@ dobro = partial(multiplicar, 2)
 
 print(dobro(10))  # 20
 print(dobro(5))   # 10
-
+```
 ## generatortype
-
+```python
 from types import GeneratorType
 
 isinstance(objeto, GeneratorType)
-
+```
 retorna true ou false verificando se é um generator
 
 ## filter
@@ -768,7 +783,7 @@ a função pede
 filter(função, lista, acumulador)
 
 exemplo:
-
+```python
 produtos = [
     {'nome': 'Produto 5', 'preco': 10.00},
     {'nome': 'Produto 1', 'preco': 22.32},
@@ -787,7 +802,7 @@ novo_produtos = filter(
     produtos,
     0
 )
-
+```
 note que novos_produtos e novo_produto fazem a mesma coisa
 
 o retorno do filter sempre será igual ou menor a lista dada
