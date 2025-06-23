@@ -827,11 +827,11 @@ print(fibonacci(5))
 Existem limites de execução, a pilha do python é definida por padrão
 caso execute um programa que passe desse limite, ele irá dar um erro
 para contornar erros de recursão por excesso é possível fazer o seguinte:
-
+```python
 import sys
 
 sys.setrecursionlimit(valordesejado)
-
+```
 ## Ambientes virtuais(venv)
 
 Ambientes virtuais são utilizados para facilitar manutenção e organização de programas
@@ -840,40 +840,54 @@ Salva-se todas versões das extensões e ferramentas utilizadas, para possível 
 ## Criando um venv
 
 para executar no powershell
+
+```powershell
 python -m venv venv
+```
 
 ## Ativando e desativando o venv
-
+```powershell
 .\venv\Scripts\activate
+```
 selecionar a pasta venv, scrits e depois ativar
 para desativar só é necessário digitar
+```powershell
 deactivate
-
+```
 as pastas podem ser diferentes de acordo com o nome dado ao ambiente virtual
 
 ## pip
 
 Instalando pacotes e bibliotecas que não estão originalmente com o python
 
+```powershell
 pip install pacote
+```
 
 para desinstalar:
-
+```powershell
 pip unistall pacote
+```
 
 para ver quais estão instalados no ambiente:
 
+```powershell
 pip freeze
+```
 
 para ver versões dos pacotes:
 
+```powershell
 pip index versions pacote
-
+```
 para atualizar:
 
+```powershell
 pip install pacote --upgrade
+```
 
 para instalar versões específicas:
 
+```powershell
 pip pacote==versão
-
+```
