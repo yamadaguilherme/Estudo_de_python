@@ -806,3 +806,74 @@ novo_produtos = filter(
 note que novos_produtos e novo_produto fazem a mesma coisa
 
 o retorno do filter sempre será igual ou menor a lista dada
+
+## funções recursivas
+
+são funções que generalizam etapas e utilizam de si mesmo para resolver um problema
+
+```python
+def fibonacci(n, x= 0, y= 1):
+    if n == 0:
+        return x
+    x = x+y
+    n -= 1
+    return fibonacci(n, y, x)
+
+print(fibonacci(5))
+```
+
+## Limite de recursão
+
+Existem limites de execução, a pilha do python é definida por padrão
+caso execute um programa que passe desse limite, ele irá dar um erro
+para contornar erros de recursão por excesso é possível fazer o seguinte:
+
+import sys
+
+sys.setrecursionlimit(valordesejado)
+
+## Ambientes virtuais(venv)
+
+Ambientes virtuais são utilizados para facilitar manutenção e organização de programas
+Salva-se todas versões das extensões e ferramentas utilizadas, para possível utilização futura.
+
+## Criando um venv
+
+para executar no powershell
+python -m venv venv
+
+## Ativando e desativando o venv
+
+.\venv\Scripts\activate
+selecionar a pasta venv, scrits e depois ativar
+para desativar só é necessário digitar
+deactivate
+
+as pastas podem ser diferentes de acordo com o nome dado ao ambiente virtual
+
+## pip
+
+Instalando pacotes e bibliotecas que não estão originalmente com o python
+
+pip install pacote
+
+para desinstalar:
+
+pip unistall pacote
+
+para ver quais estão instalados no ambiente:
+
+pip freeze
+
+para ver versões dos pacotes:
+
+pip index versions pacote
+
+para atualizar:
+
+pip install pacote --upgrade
+
+para instalar versões específicas:
+
+pip pacote==versão
+
