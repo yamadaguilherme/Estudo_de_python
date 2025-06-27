@@ -891,3 +891,82 @@ para instalar versões específicas:
 ```powershell
 pip pacote==versão
 ```
+## Requirements.txt
+
+Ao invez de colocar todo o arquivo das instalações, o mais comum é utilizar o requirements.txt, um arquivo contendo as versões necessárias 
+Para gerar requirements.txt:
+
+```powershell
+pip freeze > requirements.txt
+```
+
+Para instalar arquivos do requirements.txt:
+
+```powershell
+pip install -r ./requirements.txt
+```
+
+## Criando arquivos com python
+
+Pode criar-se arquivos atráves do python, para isso é necessário indicar qual tipo de arquivo vai ser criado:
+
+| Modo     | Nome                   | O que faz                                                       |
+|----------|------------------------|-----------------------------------------------------------------|
+| `[r]`    | **read**               | Abre para **leitura** (erro se o arquivo não existir)           |
+| `[w]`    | **write**              | Abre para **escrita** (cria ou **sobrescreve** o arquivo)       |
+| `[x]`    | **exclusive creation** | Tenta **criar** o arquivo — erro se **já existir**              |
+| `[a]`    | **append**             | Abre para **adicionar conteúdo ao final** (cria se não existir) |
+| `[b]`    | **binary**             | Abre em modo **binário** (ex: imagens, áudio, PDF)              |
+| `[t]`    | **text**               | Abre em modo **texto** (padrão)                                 |
+| `[+]`    | **update**             | Abre para **leitura e escrita** no mesmo arquivo                |
+
+```powershell
+arquivo = open('arquivo.txt', 'modo')
+
+arquivo.close()
+```
+**Lembrete:** SEMPRE FECHAR UM ARQUIVO APÓS ABRIR
+
+Um método mais fácil de abrir e fechar arquivo:
+
+```powershell
+with open('arquivo.txt', 'modo', enconding='utf8') as arquivo:
+```
+
+Para mover o "cursor" para o ínicio:
+```powershell
+arquivo.seek(0,0)
+```
+
+Para escrever mais de uma linha ou com iterável:
+```powershell
+arquivo.writelines()
+```
+
+**Lembrete:** O cursor importa no read!
+
+Para ler um arquivo:
+```powershell
+print(arquivo.read())
+```
+
+Para ler linha(funciona como next):
+```powershell
+print(arquivo.readline())
+```
+
+Para ler várias linhas():
+```powershell
+for linha in arquivo.readlines():
+    print(linha.strip())
+```
+
+Para deletar um arquivo():
+```powershell
+os.remove(caminho_arquivo)
+```
+
+Para renomear ou mover um arquivo():
+```powershell
+os.rename(caminho_arquivo,'nome_arquivo')
+```
