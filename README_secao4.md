@@ -970,3 +970,33 @@ Para renomear ou mover um arquivo():
 ```powershell
 os.rename(caminho_arquivo,'nome_arquivo')
 ```
+## Criando um arquivo json
+```python
+import json
+
+dados = {
+    "nome": "Ana",
+    "idade": 25,
+    "cursos": ["Python", "SQL"]
+}
+
+with open('dados.json', 'w') as f:
+    json.dump(dados, f, indent=4)
+```
+
+O arquivo é convertido para json, acontece algumas alterações durante a conversão
+
+## Guard Clause
+
+Para maior legibilidade do código, é possível utilizar o return dentro do primeiro if, caso não seja uma condicional extensa
+
+```python
+def listar():
+    if len(tarefas) == 0:
+        print('Não há tarefas')
+        return
+    imprime()
+```
+
+Em casos como o acima é útil para legibilidade
+Para execuções mais limpas lembrar que é possível usar o if not
