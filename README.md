@@ -5,3 +5,4 @@ Menu de acesso aos resumos
 
 *   [Seção 3](README_secao3.md)
 *   [Seção 4](README_secao4.md)
+*   [Seção 4](README_secao5.md)
