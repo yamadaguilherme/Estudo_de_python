@@ -1000,3 +1000,30 @@ def listar():
 
 Em casos como o acima é útil para legibilidade
 Para execuções mais limpas lembrar que é possível usar o if not
+
+## Positional only parameters /
+
+Tudo que vier antes da barra nos parametros, deverá ser posicional
+```python
+def function(a,b, /, c, d):
+    ...
+function(1,2,d=4,c=3)
+```
+A chamada a cima será possível pois o c e o d estão após a barra
+
+## Keyword only arguments *
+
+Tudo que vier após a barra nos parametros, deverá ser apenas argumentos nomeados
+```python
+def function(a,b, *, c, d):
+    ...
+function(1,2,d=4,c=3)
+```
+É possível a junção de ambas:
+
+```python
+def function(a,b, /,*, c, d):
+    ...
+function(1,2,d=4,c=3)
+```
+onde todos argumentos antes da barra são posicionais e todos após * são nomeados.
