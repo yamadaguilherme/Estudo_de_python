@@ -129,7 +129,7 @@ p1 = falas('Guilherme')
 p1.cumprimentar()
 ```
 
-É possível usar a hora, utilizando a class.hora ou self.hora
+É possível usar a hora, utilizando a class.hora ou self.hora  
 OBS: self.hora foi mudado no escopo do `__init__`
 
 ## `__dict__`e vars para atributos de instância
@@ -151,5 +151,5 @@ Saída:
 {'nome': 'Guilherme', 'idade': 23}   
 ```
 
-com `__dict__` você pode acessar ou modificar o dicionário
+com `__dict__` você pode acessar ou modificar o dicionário  
 com vars, é mais legível e você pode acessar o dicionário
