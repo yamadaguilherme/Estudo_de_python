@@ -153,3 +153,38 @@ Saída:
 
 com `__dict__` você pode acessar ou modificar o dicionário  
 com vars, é mais legível e você pode acessar o dicionário
+
+## Métodos de classe
+
+Pode se criar moldes com alguma das instâncias como padrão
+
+```python
+class blabla:
+    ...
+@classmethod
+def sem_nome(cls,idade):
+    return cls('Anônimo', idade)
+
+p1 = Pessoa.sem_nome(23)
+print(p1.nome, p1.idade)
+```
+Saída:
+
+```python
+Anônimo, 23
+```
+
+## Diferença entre method, classmethod e staticmethod
+
+method:
+Recebe self, acessa atributos da instância.
+→ Usado para comportamentos do objeto.
+
+@classmethod:
+Recebe cls, acessa atributos da classe.
+→ Usado para fábricas ou lógica comum a todas as instâncias.
+
+@staticmethod:
+Não recebe self nem cls, é só uma função comum dentro da classe.
+→ Usado para utilitários relacionados à classe, mas independentes dela.
+
