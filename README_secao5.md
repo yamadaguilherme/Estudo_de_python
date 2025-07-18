@@ -188,3 +188,54 @@ Recebe cls, acessa atributos da classe.
 Não recebe self nem cls, é só uma função comum dentro da classe.
 → Usado para utilitários relacionados à classe, mas independentes dela.
 
+## Property - getter pythonico
+
+O que é um getter?
+O getter serve para proteger o acesso direto ao atributo
+Podendo dar liberdade de mudar uma implementação interna sem mudar a interface pública
+Também chamado de encapsulamento
+
+Property é o modo pythonico de se utilizar um getter
+
+```python
+class Caneta:
+    def __init__(self, cor):
+        self.cor_tinta = cor
+    
+    @property
+    def cor(self):
+        return self.cor_tinta
+```
+
+Deste modo é possível chamar caneta.cor (inferface pública),
+sem acessar internamente a interna.
+
+## property+setter getter e setter pythonicos
+
+Consenso geral: caso a instância ou método possua um atributo nomeado com _ na frente, é um aviso para não se utilizar diretamente o valor.
+
+setter sempre vem acompanhado do getter
+
+setter 
+
+Ele permite adicionar validação, regras de negócio ou lógica extra ao definir um valor, sem que o usuário perceba que está usando um método.
+
+```python
+class Produto:
+    def __init__(self, preco):
+        self._preco = preco
+
+    @property
+    def preco(self):  # Getter
+        return self._preco
+
+    @preco.setter
+    def preco(self, valor):  # Setter
+        if valor < 0:
+            raise ValueError('O preço não pode ser negativo')
+        self._preco = valor
+p1 = Produto('chaveiro')
+p1.preco = 10
+```
+
+setter está entrando como uma regra para redefinição, além da chamada dele ser mais interativa.
