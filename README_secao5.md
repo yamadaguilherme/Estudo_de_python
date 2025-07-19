@@ -241,7 +241,7 @@ p1.preco = 10
 setter está entrando como uma regra para redefinição, além da chamada dele ser mais interativa.
 
 <p align="center">
-  <img src="https://python.pages.doc.ic.ac.uk/lessons/core09/02-association/_images/aggregation.png" alt="Imagem de lógica">
+  <img <img src="https://github.com/user-attachments/assets/5bce3995-f6c9-4e4a-bbef-af709cb0ebf1" /> alt="Imagem de lógica">
 </p>
 
 <p align="center">
