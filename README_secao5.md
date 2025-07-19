@@ -239,3 +239,11 @@ p1.preco = 10
 ```
 
 setter está entrando como uma regra para redefinição, além da chamada dele ser mais interativa.
+
+<p align="center">
+  <img src="(https://python.pages.doc.ic.ac.uk/lessons/core09/02-association/_images/aggregation.png)" alt="Imagem de lógica">
+</p>
+
+<p align="center">
+  <em>[imagem retirada do site 'python.pages', em 19/07/2025]</em>
+</p>
