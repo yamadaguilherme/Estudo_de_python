@@ -240,6 +240,32 @@ p1.preco = 10
 
 setter está entrando como uma regra para redefinição, além da chamada dele ser mais interativa.
 
+
+## Encapsulamento (modificadores de acesso:public, protected, private)
+Python não tem esses modficadores, mas consegue utilizar métodos para simulalos.
+
+public(sem underline):  
+pode ser utilizado em qual quer lugar
+
+protected(um underline):
+não deve ser usado fora da classe ou em suas subclasses
+
+private(dois underlines):
+Só deve ser utilizado na classe em que foi declarada
+
+## Relações entre classes: Associação, agregação e composição
+
+Associação:
+Duas classes independentes, onde uma utiliza a outra, mas nenhuma depende da outra para existir.
+
+Agregação:
+Duas classes independentes, onde uma possui a outra, mas a parte pode existir separadamente do todo.
+
+Composição:
+Uma classe possui e controla a outra, e a parte não existe separadamente — sua vida depende do todo.
+
+
+
 <p align="center">
   <img <img src="https://github.com/user-attachments/assets/5bce3995-f6c9-4e4a-bbef-af709cb0ebf1" /> alt="Imagem de lógica">
 </p>
