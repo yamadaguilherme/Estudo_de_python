@@ -277,12 +277,13 @@ Uma classe possui e controla a outra, e a parte não existe separadamente — su
 ## Notas sobre classes
 
 **Inicializar com atributos ainda indefinidos:**
-
+```python
 class Pc:
     def __init__(self, versao):
         self._versao = versao
         self._placa = None
         self._marca = None
+```
 
 Quando usar isso:
 
@@ -295,19 +296,25 @@ Ou quando esses valores serão definidos depois, via métodos, setter ou outros 
 O agregador que irá utilizar o getter e o setter, ele será o "controlador" das ligações
 
 **Inicializar com tudo já disponível:**
-
+```python
 class Pc:
     def __init__(self, versao, placa, marca):
         self._versao = versao
         self._placa = placa
         self._marca = marca
-
+```
 Quando usar isso:
 
 Quando você já tem todas as informações necessárias para criar o objeto completo.
 
 Mais direto e simples, sem necessidade de setter para definir atributos depois.
 
+## Herança, generalização e especialização
 
+Cliente é uma especialização de Pessoa  
+Cliente herda características de Pessoa(subclasse)
+
+Pessoa é uma generalização de Cliente  
+Pessoa é a superclasse que generaliza comportamentos comuns (como nome, CPF, etc)
 
 
