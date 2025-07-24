@@ -273,3 +273,41 @@ Uma classe possui e controla a outra, e a parte não existe separadamente — su
 <p align="center">
   <em>[imagem retirada do site 'python.pages', em 19/07/2025]</em>
 </p>
+
+## Notas sobre classes
+
+**Inicializar com atributos ainda indefinidos:**
+
+class Pc:
+    def __init__(self, versao):
+        self._versao = versao
+        self._placa = None
+        self._marca = None
+
+Quando usar isso:
+
+Quando você ainda não tem todas as informações no momento da criação do objeto.
+
+Ou quando esses valores serão definidos depois, via métodos, setter ou outros processos.
+
+Útil para relacionar objetos depois, como associar uma Placa e uma Marca a esse Pc.
+
+O agregador que irá utilizar o getter e o setter, ele será o "controlador" das ligações
+
+**Inicializar com tudo já disponível:**
+
+class Pc:
+    def __init__(self, versao, placa, marca):
+        self._versao = versao
+        self._placa = placa
+        self._marca = marca
+
+Quando usar isso:
+
+Quando você já tem todas as informações necessárias para criar o objeto completo.
+
+Mais direto e simples, sem necessidade de setter para definir atributos depois.
+
+
+
+
