@@ -317,4 +317,71 @@ Cliente herda características de Pessoa(subclasse)
 Pessoa é uma generalização de Cliente  
 Pessoa é a superclasse que generaliza comportamentos comuns (como nome, CPF, etc)
 
+## Herança simples
+```python
+class Char:
+  def __init__(self, name, power):
+    self.name = name
+    self.power = power
+  def who(self):
+    print('oi')
+    print(f'Name: {self.name}\n Power: {self.power}\n Class: {self.__class__.__name__}')
 
+class Hero(Char):
+  ...
+
+class Villain(Char):
+  ...
+
+h1 = Hero('Spider Man', 'Spider sense')
+h1.who()
+v1 = Villain('Sandman', 'Manipulation')
+v1.who()
+```
+
+Saída:
+```python
+oi
+Name: Spider Man
+ Power: Spider sense
+ Class: Hero
+oi
+Name: Sandman
+ Power: Manipulation
+ Class: Villain
+```
+ Para fazer uma classe que possui herança de outra, basta criar com a superclasse dentro dos parênteses como mostrado em:
+```python
+ class Hero(Char):
+#Char é a super classe
+#Hero é a classe que herda
+```
+Todo oque Char tem, Hero irá herdar, inclusive seus métodos, o 'oi' no exemplo acima é impresso, mas poderia ser mudado adicionando o mesmo método nas heranças:
+
+```python
+class Hero(Char):
+  def who(self):
+    print('Executei em hero')
+    print(f'Name: {self.name}\n Power: {self.power}\n Class: {self.__class__.__name__}')
+
+class Villain(Char):
+  def who(self):
+    print('Executei em Villain')
+    print(f'Name: {self.name}\n Power: {self.power}\n Class: {self.__class__.__name__}')
+```
+Saída: 
+```python
+Executei em hero
+Name: Spider Man    
+ Power: Spider sense
+ Class: Hero        
+Executei em Villain 
+Name: Sandman       
+ Power: Manipulation
+ Class: Villain    
+```
+
+ As chamadas das classes seguem a ordem de MRO(Method Resolution Order):
+ Procure o método na própria classe. Se não tiver, suba para a classe pai (superclasse), e assim por diante.
+
+ 
