@@ -385,3 +385,48 @@ Name: Sandman
  Procure o método na própria classe. Se não tiver, suba para a classe pai (superclasse), e assim por diante.
 
  
+## Super e sobreposição de membros
+
+Quando uma classe herda de outra classe, todos seus métodos são herdados também, caso haja necessidade de adição de regras em um método já herdado, é utilizado o super().
+
+Exemplo:
+
+'''python
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        print(f'Nome: {self.nome}\nIdade:{self.idade}')
+class Funcionario(Pessoa):
+    def __init__(self, nome, idade, cargo, salario):
+        super().__init__(nome, idade)
+        self.cargo = cargo
+        self.salario = salario
+    def apresentar(self):
+        super().apresentar()
+        print(f'Cargo: {self.cargo}\nSalario:{self.salario}')
+
+p1 = Pessoa('Gui', '23')
+p1.apresentar()
+p2 = Funcionario('Gio', '21', 'efetivada',2500)
+p2.apresentar()
+
+'''
+
+p1 acessa a super classe, no qual só printa nome e idade,
+p2 acessa a subclasse, que possui nome, idade, cargo e salario
+
+ainda é possivel o uso da p2 no método de apresentação da classe Pessoa:
+
+'''python
+Pessoa.apresentar(p2)
+'''
+
+
+## Herança múltipla
+
+Uma classe pode herdar de mais de uma classe, porém é necessário o entendimento da MRO(Method resolution order)
+Pois caso haja dois caminhos para o mesmo método chamado, pode se criar conflitos
+
