@@ -391,7 +391,7 @@ Quando uma classe herda de outra classe, todos seus métodos são herdados tamb�
 
 Exemplo:
 
-'''python
+```python
 class Pessoa:
     def __init__(self, nome, idade):
         self.nome = nome
@@ -413,20 +413,44 @@ p1.apresentar()
 p2 = Funcionario('Gio', '21', 'efetivada',2500)
 p2.apresentar()
 
-'''
+```
 
 p1 acessa a super classe, no qual só printa nome e idade,
 p2 acessa a subclasse, que possui nome, idade, cargo e salario
 
 ainda é possivel o uso da p2 no método de apresentação da classe Pessoa:
 
-'''python
+```
 Pessoa.apresentar(p2)
-'''
+```
 
 
 ## Herança múltipla
 
-Uma classe pode herdar de mais de uma classe, porém é necessário o entendimento da MRO(Method resolution order)
-Pois caso haja dois caminhos para o mesmo método chamado, pode se criar conflitos
 
+Uma classe pode herdar de mais de uma classe, porém é necessário o entendimento da MRO(Method resolution order) pois caso haja dois caminhos para o mesmo método chamado, pode se criar conflitos.
+```python
+
+class A:
+    ...
+    def quem_sou(self):
+        print('A')
+class B(A):
+    ...
+class C(A):
+    ...
+    def quem_sou(self):
+        print('C')
+class D(B,C):
+    ...
+d = D()
+d.quem_sou()
+```
+Saída:
+```python
+C
+```
+Pelo MRO, como a chamada está em D, a ordem será dos argumentos dados na classe, sendo primeiro B e depois C, após isso de quem herdaram, o A.  
+Caso não haja a função em B, ele irá procurar em C
+
+## Mixins e abstração
