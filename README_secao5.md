@@ -453,4 +453,25 @@ C
 Pelo MRO, como a chamada está em D, a ordem será dos argumentos dados na classe, sendo primeiro B e depois C, após isso de quem herdaram, o A.  
 Caso não haja a função em B, ele irá procurar em C
 
-## Mixins e abstração
+## Mixins
+
+Mixin é uma classe complementar, feita para herdar e adicionar comportamentos extras para poder ser reutilizado.
+
+Classes complementares não são autônomas, apenas possuem funções para serem adicionadas em outras classes.
+
+## Abstração
+
+Abstração em classes é você manter um método assinatura para serem obrigatórios a criação para classes subsequêntes:
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def emitir_som(self):
+        pass
+```
+Toda classe que herdar de animal precisará ter emitir_som  
+
+Como demonstrado, para criação de classes abstratas é necessário importar e sua classe precisará herdar de ABC
+Após isso é necessário usar @abstractmethod em cima do método que será uma assinatura
